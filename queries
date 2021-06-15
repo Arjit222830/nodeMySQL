@@ -1,0 +1,9 @@
+USE TinyURL;
+
+CREATE TABLE `shortcode` (
+	`shortcode` varchar(500) UNIQUE DEFAULT NULL,
+    `url` varchar(1000) DEFAULT NULL,
+    `startDate` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+    `lastSeenDate` DATETIME on UPDATE CURRENT_TIMESTAMP DEFAULT NULL,
+    `redirectCount` INT DEFAULT NULL
+)
